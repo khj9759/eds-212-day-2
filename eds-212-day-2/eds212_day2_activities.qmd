@@ -30,3 +30,22 @@ dp_da <- D(pa, 'a')
 a <- 1.2
 eval(dp_da)
 ```
+
+# Section 4:**Make another penguin plot**
+
+```{r}
+ggplot(data = penguins, aes (x = bill_length_mm, y = bill_depth_mm, color = species)) + 
+  geom_point() + 
+  labs(x = "Bill length (mm)", 
+       y= "Bill depth (mm)", 
+       title = "Palmer penguins body volume")
+
+```
+
+```{r}
+ggplot(data = penguins, aes (x = species, y = flipper_length_mm)) + 
+  geom_jitter() + 
+    labs(x = "species", 
+       y= "filpper lenghth (mm)", 
+       title = "flipper length by species")
+```
