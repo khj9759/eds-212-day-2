@@ -8,3 +8,25 @@ title: "eds-212-day-2"
 library(tidyverse)
 library(palmerpenguins)
 ```
+
+\# A. Find the slope of f(x)= x2 at x=3
+
+```{r}
+
+
+fx <- expression (x^2)
+df_dx <- D(fx , 'x')
+x <- 3
+eval(df_dx)
+
+
+```
+
+B. Find the slope of P(a)=2(3a+2)^4^−5 at a=1.2
+
+```{r}
+pa = expression (2 * (3 * a + 2)^4 - 5)
+dp_da <- D(pa, 'a')
+a <- 1.2
+eval(dp_da)
+```
