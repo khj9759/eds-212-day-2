@@ -1,0 +1,10 @@
+---
+title: "eds-212-day-2"
+---
+
+## **Section 3: Derivatives in R**
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```

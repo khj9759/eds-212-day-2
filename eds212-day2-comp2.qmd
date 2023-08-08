@@ -1,0 +1,54 @@
+---
+title: "day2"
+format: html
+---
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+## Plotting functions in ggpolot2
+
+```{r}
+fx = function(x) (3 * x ^ 2 + 4)
+  
+# combine funciton, c = () make the vetor on it  
+# geom_function, fun to be used as a y-axis
+ggplot(data = data.frame(x = c(1,100)), aes (x = x)) + 
+ geom_function(fun = fx)
+
+```
+
+## Partial Derivatives
+
+```{r}
+fxyz = expression (2 * x * y + 3 * (x ^ 2) * (z ^ 3))
+
+dfdy = D(fxyz, 'y')
+
+dfdy
+```
+
+# Penguins Plot
+
+```{r}
+
+ggplot (data = penguins, aes (x = body_mass_g, y = flipper_length_mm)) + 
+  geom_point(color = "purple") +
+  labs(x = "Body mass (g)", 
+       y= "Flipper length (mm)", 
+       title = "Palmer penguins body dimensions")
+
+#color change: species, aes = mapping variable to chart as statics, variable = outside of functions
+```
+
+```{r}
+ggplot (data = penguins, aes (x = body_mass_g, y = flipper_length_mm, color = species)) + 
+  geom_point() +
+  labs(x = "Body mass (g)", 
+       y= "Flipper length (mm)", 
+       title = "Palmer penguins body dimensions")
+
+theme_minimal() #customize the variable aes layer
+```
